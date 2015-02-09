@@ -1,10 +1,3 @@
-// HistLena.cpp : Defines the entry point for the console application.
-//
-
-#include "stdafx.h"
-
-// Example1.cpp : Defines the entry point for the console application.
-//
 
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/core/core.hpp>
@@ -45,7 +38,6 @@ Mat_<T> transLocate(Mat_<T>& image)
 }
 Mat GetImage(const char* imgFileName)
 {
-	//const char* lenaPng = R"FileName(C:\Projects\opencv-master\opencv-master\samples\winrt\OcvImageProcessing\OcvImageProcessing\Assets\Lena.png)FileName";
 	Mat src = imread(imgFileName);
 	if (src.empty())
 		throw "Error";
@@ -85,7 +77,7 @@ Mat CreateImage(const char* imgFileName)
 	Mat img = transLocate(retVal);
 	return img+noise;
 }
-// Test the `showHistogram()` function above
+
 int main(int argc, char* argv[])
 {
 
